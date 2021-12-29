@@ -122,19 +122,41 @@
       var board = [];
     
       function genboard() {
-        console.log("got to");
-        while(boardSize != 0) {
-          console.log("got to");
-            board.push(document.getElementById('tile'+(boardSize).toString()));
-            boardSize -= 1;
-            console.log("got to");
-        };
-        boardSize = 25;
+        var board = [document.getElementById('tile1'),
+        document.getElementById('tile2'),
+        document.getElementById('tile3'),
+        document.getElementById('tile4'),
+        document.getElementById('tile5'),
+        document.getElementById('tile6'),
+        document.getElementById('tile7'),
+        document.getElementById('tile8'),
+        document.getElementById('tile9'),
+        document.getElementById('tile10'),
+        document.getElementById('tile11'),
+        document.getElementById('tile12'),
+        document.getElementById('tile13'),
+        document.getElementById('tile14'),
+        document.getElementById('tile15'),
+        document.getElementById('tile16'),
+        document.getElementById('tile17'),
+        document.getElementById('tile18'),
+        document.getElementById('tile19'),
+        document.getElementById('tile20'),
+        document.getElementById('tile21'),
+        document.getElementById('tile22'),
+        document.getElementById('tile23'),
+        document.getElementById('tile24'),
+        document.getElementById('tile25')
+      ];
+        return board
+
     };
       function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 };
-let swordD = [
+
+      function gen() {
+        let swordD = [
 {
     "Dex": "819",
     "Name": "Skwovet",
@@ -17957,14 +17979,12 @@ let shieldD = [
 ]
   
 
-      function gen() {
-     
         
-        genboard();
+        var bo = genboard();
         currentW = document.getElementById('Weather');
         versionE = document.getElementById('Generation');
-
-          for (var poke of board){
+        const base = "https://www.serebii.net/pokemon/art/";
+          for (var poke of bo){
             poke.style = 'background-color: white;'
             if (versionE.value == "sh"){
             num = getRandomInt(1100);
